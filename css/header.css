@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-left: 16px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 57px;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    color: var(--dark-gray);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.phrase {
+    color: var(--light-grey);
+    font-weight: 400;
+}

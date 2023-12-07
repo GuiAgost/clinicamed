@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@import url(header.css);
+@import url(schedule.css);
+@import url(footer.css);
+
+
+:root {
+    --fundo-principal: linear-gradient(166deg, #F8F4FF 20%, #EFF0F4 100%);
+    --dark-gray: #464646;
+    --font-main: 'Montserrat', sans-serif;
+    --white: #FFFFFF;
+    --light-grey: #A3A3A3;
+    --btn-orange: #FFB050;
+    --border-btn: #ECECEC;
+    --azul: #4894FF;
+}
+
+body {
+    background: var(--fundo-principal);
+    font-family: var(--font-main);
+}
+
+
+.floating__button {
+    position: fixed;
+    z-index: 5;
+    bottom: 65px;
+    right: 20px;
+}
+
+/* BOTÃO "+" */
+.floating__button .icon-more {
+    background-color: var(--azul);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* ABRE O MENU */
+.floating__button-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    opacity: 1;
+    right: 0;
+    bottom: 40px;
+    transition: 0.3s ease;
+    transform: scale(0);
+    transform-origin: bottom right;
+    z-index: 5;
+}
+
+.floating__button:hover .floating__button-options {
+    transform: scale(1);
+}
+
+/* TELA PRINCIPAL ESCURA QUANDO CLICAR O BOTÃO FLUTUANTE */
+body .floating__button:hover::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+}
+
+
+body .floating__button:hover::before {
+    display: none;
+}
+
+.floating__button-item {
+    color: var(--white);
+    background-color: var(--azul);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    border-radius: 23px;
+    padding: 2px 8px;
+    font-size: 12px;
+    text-align: center;    
+    font-weight: 500;
+}   
+
+button.floating__button-item:hover {
+    background-color: #2980b9;
+}
+
+.floating__button-options{
+    display: flex;
+    gap: 16px;
+}
+
+.floating__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transform: translate(-1%,-50%);
+    gap: 16px;
+
+}
+
+button.floating__button-item span {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    /* display: block; */
+}
+
+button.floating__button-item span.icon-local {
+    background-image: url('../img/pin-icon-white.svg');
+}
+
+button.floating__button-item span.icon-remote {
+    background-image: url('../img/camera-icon-white.svg');
+}

@@ -1,0 +1,110 @@
+.query__date {
+    color: var(--dark-gray);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0px 8px 16px;
+}
+
+.schedule {
+    padding: 0px 16px 24px 16px;
+}
+
+.schedule__card {
+    background: #FFFFFF;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+li:last-child .schedule__card {
+    margin: 0;
+}
+
+.schedule__card-paciente {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    /* border-bottom: 1px solid var(--dark-gray); */
+}
+
+.schedule__card-paciente--avatar {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.schedule__card-paciente--info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.schedule__card-paciente--nome {
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+span.icon-camera {
+    background-image: url('../img/Camera-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 25px;
+    color: var(--light-grey);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.schedule__card-chat {
+    background-image: url('../img/Chat1-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    width: 32px;
+    margin-left: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.clocks {
+    font-size: 12px;
+    color: var(--dark-gray);
+}
+
+.schedule__button {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.btn__video {
+    background-color: var(--btn-orange);
+    color: var(--white);
+    border: none;
+}
+
+.btn__audio {
+    border: 1px solid var(--border-btn);
+    background-color: var(--white);
+    color: var(--dark-gray);
+}
+
+.btn__font {
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-size: 14px;
+    font-family: var(--font-main);
+}
+
+.border {
+    border-top: 1px solid var(--dark-gray);    
+}
