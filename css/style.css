@@ -44,6 +44,7 @@ body {
 /* ABRE O MENU */
 .floating__button-options {
     display: flex;
+    gap: 16px;
     flex-direction: column;
     position: absolute;
     width: 300px;
@@ -61,8 +62,12 @@ body {
 }
 
 /* TELA PRINCIPAL ESCURA QUANDO CLICAR O BOTÃO FLUTUANTE */
-body .floating__button:hover::after{
-    content: "";
+.floating__button {
+    position: fixed;
+}
+
+.overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,13 +75,10 @@ body .floating__button:hover::after{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
-    overflow: hidden;
-    display: block;
 }
 
-
-body .floating__button:hover::before {
-    display: none;
+.darken {
+    z-index: 2;
 }
 
 .floating__button-item {
@@ -101,35 +103,25 @@ body .floating__button:hover::before {
     font-weight: 500;
 }   
 
-button.floating__button-item:hover {
-    background-color: #2980b9;
-}
-
-.floating__button-options{
-    display: flex;
-    gap: 16px;
-}
-
 .floating__button-container {
     display: flex;
     align-items: center;
     justify-content: end;
     transform: translate(-1%,-50%);
     gap: 16px;
-
 }
 
-button.floating__button-item span {
+.floating__button-item span {
+    display: flex;
     width: 24px;
     height: 24px;
     background-size: cover;
-    /* display: block; */
 }
 
-button.floating__button-item span.icon-local {
+.icon-local {
     background-image: url('../img/pin-icon-white.svg');
 }
 
-button.floating__button-item span.icon-remote {
+.icon-remote {
     background-image: url('../img/camera-icon-white.svg');
 }
